@@ -1,0 +1,11 @@
+export {default as Charity} from './Charity';
+export {default as Register} from './Register';
+export {default as Verify} from './Verify';
+export {default as Remittance} from './Remittance';
+export {default as Recipient} from './Recipient';
+export {default as Preview} from './preview';
+export {default as Preview2} from './preview2';
+export {default as Settings} from './settings';
+export {default as Home} from './home';
+export {default as Dashboard} from './dashboard';
+export {default as Balance} from './balance';
