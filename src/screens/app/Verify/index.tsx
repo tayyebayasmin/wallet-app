@@ -1,5 +1,5 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import React from 'react';
+import React, {useState} from 'react';
 import {Image, View, TextInput, TouchableOpacity, Text} from 'react-native';
 import {ScreenWrapper} from 'react-native-screen-wrapper';
 import styles from './styles';
@@ -11,6 +11,9 @@ import LinearGradient from 'react-native-linear-gradient';
 import {ScreenNames} from '~routes';
 
 const Verify = ({navigation}: NativeStackScreenProps<any>) => {
+  const [amount, setAmount] = useState('');
+  const [recieveamount, setRecieveAmount] = useState('200');
+
   return (
     <ScreenWrapper statusBarColor={'white'} barStyle="dark-content">
       <View style={styles.container}>
@@ -139,7 +142,6 @@ const Verify = ({navigation}: NativeStackScreenProps<any>) => {
             </CustomText>
           </TouchableOpacity>
         </View>
-
         {/* PayG Verify Charity Details Section */}
         <View style={{flexDirection: 'row'}}>
           <Button
@@ -190,6 +192,20 @@ const Verify = ({navigation}: NativeStackScreenProps<any>) => {
             resizeMode="contain"
           />
         </View>
+        <Text style={[styles.label, {marginTop: 15}]}>Amount:</Text>
+        <TextInput
+          style={[styles.amountInput]}
+          value={amount}
+          onChangeText={setAmount}
+          keyboardType="numeric"
+        />
+        <Text style={styles.label}>Recieve Amount:</Text>
+        <TextInput
+          style={[styles.amountInput]}
+          value={recieveamount}
+          onChangeText={setRecieveAmount}
+          keyboardType="numeric"
+        />
         {/* Confirm Button */}
         <Button
           size={3.5}

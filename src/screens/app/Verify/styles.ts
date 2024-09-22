@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     borderRadius: width(2),
     flex: 1,
     height: width(15),
-    color: 'red',
+    color: '#000',
     padding: width(2),
   },
   searchButton: {
@@ -74,6 +74,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: width(2),
+  },
+  amountInput: {
+    borderColor: '#ccc',
+    borderWidth: 1,
+    borderRadius: width(2),
+    height: width(12),
+    color: '#000',
+    marginVertical: 8,
+    padding: width(2),
   },
   confirmButton: {
     position: 'absolute',
